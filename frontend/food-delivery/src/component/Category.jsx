@@ -1,0 +1,29 @@
+import React, { useContext } from 'react'
+import { categories } from '../assets/assets'
+import { AppContext } from '../context/Appcontext'
+
+export default function Category() {
+    const {navigate}=useContext(AppContext);
+  return (
+    <div className='mt-16'>
+      <p className='text-2xl font-medium md:text-3xl'>Catogories</p>
+      <div className='my-6 grid grid-cols-2 sm:grid-cols-3  md:grid-cols-7
+       gap-4 items-center justify-center'>
+        {
+            categories.map((Category,index)=>(
+                <div onClick={()=>{
+                    navigate(`/products/${Category.path.toLocaleLowerCase()}`);
+                    scrollTo(0,0);
+                }} 
+                key={index}
+                className='group cursor-pointer py-5 px-3 rounded-lg gap-2 flex flex-col items-center 
+                justify-center' style={{backgroundColor:Category.bgColor}}>
+                    <img src={Category.image} alt="" className='max-w-28 transition group-hover:scale-110' />
+                 <p className='text-sm font-medium'> {Category.text} </p>
+                </div>
+            ))
+        }
+      </div>
+    </div>
+  )
+}
