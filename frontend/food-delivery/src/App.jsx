@@ -19,7 +19,7 @@ import AddProduct from './pages/seller/AddProduct';
 import ProductList from './pages/seller/ProductList';
 import Orders from './pages/seller/Orders';
 import { AppContext } from './context/Appcontext';
-import Cart from './pages/cart';
+import Cart from './pages/Cart';
 
 
 const App=()=>{ 
