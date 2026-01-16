@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../component/hero'
+import Hero from '../component/Hero'
 import Category from '../component/Category'
 import BestSeller from '../component/BestSeller'
 import ProductCard from '../component/ProductCard'
