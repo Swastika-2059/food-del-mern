@@ -24,7 +24,7 @@ connectDB();
 connectCloudinary();
 
 const corsOptions={
-  origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+  origin: ["https://food-del-frontend-gkmw.onrender.com", "https://food-del-frontend-gkmw.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 };
